@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+</head>
+<body>
+<form action="#">
+<h3> Enter height = </h3>
+<input type="text" id="hght">
+<h3> Enter width= </h3>
+<input type="text" id="wdth">
+<h3> Enter color= </h3>
+<input type="text" id="clr"><br><br><button onclick="draw()">Draw</button><br>
+<canvas id="cid" width="782" height="945"></canvas>
+
+</form>
+</body>
+<script>
+ function draw() {
+var c = document.getElementById("cid");
+var box = c.getContext("2d");
+box.beginPath();
+
+box.fillStyle = document.getElementById("clr").value;
+box.fillRect(50, 20, document.getElementById("hght").value, document.getElementById("wdth").value);
+box.stroke();
+}
+</script> 
+</html>
